@@ -4,12 +4,13 @@ import { CssBaseline } from '@mui/material';
 import Header from './components/Header';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import headerItems from './header.json';
 
 function App() {
   return (
     <Fragment>
       <CssBaseline />
-      <Header />
+      <Header menuList={headerItems} />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>

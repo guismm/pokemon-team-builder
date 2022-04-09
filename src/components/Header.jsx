@@ -7,7 +7,16 @@ import {
     IconButton
 } from '@mui/material';
 
-const Header = () => {
+const MenuListItem = ({ name }) => {
+    console.log(name);
+    return (
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            {name}
+        </Typography>
+    )
+};
+
+const Header = ({ menuList }) => {
     return (<Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
             <Toolbar>
@@ -19,9 +28,9 @@ const Header = () => {
                     sx={{ mr: 2 }}
                 >
                 </IconButton>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    Meus times
-                </Typography>
+                {menuList.map(({ name }) => (
+                    <MenuListItem name={name} />
+                ))}
             </Toolbar>
         </AppBar>
     </Box>);
