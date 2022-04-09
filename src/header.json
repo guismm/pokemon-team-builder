@@ -1,3 +1,4 @@
 [
-    { "name": "Meus times", "path": "/teams" }
+    { "name": "Home", "path": "/" },
+    { "name": "Times", "path": "/teams" }
 ]
